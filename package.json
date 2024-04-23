@@ -10,12 +10,10 @@
     "theme": "dark"
   },
   "keywords": [
-    "react",
-    "typescript",
-    "next",
-    "styled-components",
-    "graphql",
-    "apollo"
+    "blade",
+    "laravel",
+    "vscode",
+    "copy"
   ],
   "repository": {
     "url": "https://github.com/thayronarrais/vscode-blade-copy-path"
