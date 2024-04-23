@@ -1,0 +1,88 @@
+{
+  "name": "bladecopypath",
+  "displayName": "BladeCopyPath",
+  "description": "Easy copy blade laravel",
+  "version": "0.0.1",
+  "publisher": "Thayron Arrais",
+  "icon": "logo.png",
+  "galleryBanner": {
+    "color": "#030518",
+    "theme": "dark"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "next",
+    "styled-components",
+    "graphql",
+    "apollo"
+  ],
+  "repository": {
+    "url": "https://github.com/thayronarrais/vscode-blade-copy-path"
+  },
+  "homepage": "https://github.com/thayronarrais/vscode-blade-copy-path",
+  "bugs": {
+    "url": "https://github.com/thayronarrais/vscode-blade-copy-path/issues"
+  },
+  "engines": {
+    "vscode": "^1.88.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [{
+      "command": "bladecopypath.editor",
+      "title": "Copy Blade Path"
+    },{
+      "command": "bladecopypath.title",
+      "title": "Copy Blade Path"
+    }
+  ],
+  "keybindings": [
+    {
+        "command": "bladecopypath.editor",
+        "key": "ctrl+shift+c"
+    }
+  ],
+    "menus": {
+      "editor/title": [
+          {
+              "when": "resourceLangId == 'blade'",
+              "command": "bladecopypath.editor",
+              "group": "9_cutcopypaste"
+          }
+      ],
+      "editor/context": [
+          {
+              "when": "resourceLangId == 'blade'",
+              "command": "bladecopypath.editor",
+              "group": "9_cutcopypaste"
+          }
+      ],
+      "explorer/context": [
+          {
+              "when": "resourceLangId == 'blade'",
+              "command": "bladecopypath.editor",
+              "group": "9_cutcopypaste"
+          }
+      ]
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.88.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "eslint": "^8.57.0",
+    "typescript": "^5.3.3",
+    "@vscode/test-cli": "^0.0.8",
+    "@vscode/test-electron": "^2.3.9"
+  }
+}
